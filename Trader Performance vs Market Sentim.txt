@@ -1,0 +1,73 @@
+Trader Performance vs Market Sentiment — Summary
+Methodology
+
+This analysis investigates how Bitcoin market sentiment (Fear/Greed index) relates to trader behavior and performance on Hyperliquid.
+
+Two datasets were used:
+
+Daily Bitcoin Fear/Greed sentiment data
+
+Historical trade-level data from Hyperliquid
+
+Data was cleaned by:
+
+Removing duplicates and confirming no missing values
+
+Converting timestamps to datetime format
+
+Aligning both datasets at a daily level
+
+Restricting analysis to the overlapping period (Jan 2023 – May 2025)
+
+Daily trader-level metrics were engineered:
+
+Daily PnL (sum of Closed PnL per account per day)
+
+Trade frequency (number of trades per day)
+
+Win rate (percentage of profitable trades)
+
+PnL volatility (standard deviation as a risk proxy)
+
+Sentiment was consolidated into two regimes:
+
+Fear (Fear + Extreme Fear)
+
+Greed (Greed + Extreme Greed)
+
+Traders were segmented into:
+
+High-Frequency traders (above median daily trade count)
+
+Low-Frequency traders (below median)
+
+Key Insights
+1. Fear Regimes Generate Higher Returns but Higher Risk
+
+Average daily PnL is highest during Fear periods. However, volatility is also significantly elevated. This suggests Fear environments create larger price swings that can be profitably exploited, but with greater downside risk.
+
+2. Greed Regimes Offer More Consistent Performance
+
+Greed periods show a higher median PnL and slightly higher win rates compared to Fear. Returns are more stable but smaller in magnitude, indicating more consistent but less explosive profitability.
+
+3. High-Frequency Traders Benefit Most from Fear
+
+High-frequency traders earn their highest returns during Fear regimes, despite having slightly lower win rates. This indicates a volatility-harvesting behavior: fewer wins, but larger profitable trades.
+Low-frequency traders do not show strong adaptation to sentiment changes and display weaker risk-adjusted performance.
+
+4. Directional Bias Does Not Shift Significantly
+
+The long/short ratio remains approximately balanced across regimes, suggesting traders are not strongly sentiment-directional but likely operate short-term or market-neutral strategies.
+
+Strategy Recommendations
+Strategy 1: Volatility Allocation Rule
+
+During Fear regimes, increase capital allocation to high-frequency traders, as they demonstrate superior performance in high-volatility environments.
+
+Strategy 2: Risk Control in Greed
+
+During Greed regimes, cap leverage and reduce aggressive exposure, particularly for high-frequency traders, as return volatility remains high while average returns decline.
+
+Conclusion
+
+The analysis demonstrates that market sentiment influences trader performance primarily through volatility dynamics rather than directional bias. Incorporating sentiment-aware allocation and trader segmentation can improve risk-adjusted performance and inform smarter capital deployment strategies.
